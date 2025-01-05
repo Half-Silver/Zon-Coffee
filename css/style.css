@@ -1414,7 +1414,7 @@ ul.conta li a {
 
 /* Hover effect for signature trigger areas */
 .logo a:hover::after {
-    content: 'Press B to meet the developer';
+    content: 'Type DEV to meet the developer';
     position: absolute;
     bottom: -25px;
     left: 50%;

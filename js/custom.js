@@ -229,78 +229,7 @@ function createCoffeeSpot(e) {
     }, 2000);
 }
 
-// Developer Signature
-document.addEventListener('DOMContentLoaded', function() {
-    // Console signature
-    console.log(`
-    ██████╗  █████╗ ███████╗██╗██╗     
-    ██╔══██╗██╔══██╗██╔════╝██║██║     
-    ██████╔╝███████║███████╗██║██║     
-    ██╔══██╗██╔══██║╚════██║██║██║     
-    ██████╔╝██║  ██║███████║██║███████╗
-    ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝╚══════╝
-                                    
-    Find me on:
-    GitHub: github.com/Half-Silver
-    LinkedIn: linkedin.com/in/halfsilver
-    Instagram: furious_gecko_992
-    Twitter: @BasilTAbraham3
-    `);
-
-    document.addEventListener('keypress', function(e) {
-        // Check each key sequence
-        Object.keys(keys).forEach(sequence => {
-            if (e.key.toLowerCase() === keys[sequence][currentKeys[sequence]]) {
-                currentKeys[sequence]++;
-                
-                // If sequence completed
-                if (currentKeys[sequence] === keys[sequence].length) {
-                    showDevSignature(sequence);
-                    currentKeys[sequence] = 0;
-                }
-            } else {
-                currentKeys[sequence] = 0;
-            }
-        });
-    });
-});
-
-function showDevSignature(trigger) {
-    const messages = {
-        konami: "🎮 Konami Code Master!",
-        dev: "💻 Developer Mode",
-        zon: "☕ Coffee Time!"
-    };
-
-    const signature = document.createElement('div');
-    signature.className = 'dev-signature';
-    signature.innerHTML = `
-        <div class="signature-content">
-            <div class="dev-avatar">B</div>
-            <div class="dev-name">Basil T Abraham</div>
-            <div class="dev-info">
-                <p>Full Stack Developer</p>
-                <div class="dev-tagline">${messages[trigger] || 'Turning Coffee into Code ☕'}</div>
-                <div class="dev-links">
-                    <a href="https://github.com/Half-Silver" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/halfsilver/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/furious_gecko_992" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
-                    <a href="https://twitter.com/BasilTAbraham3" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
-                </div>
-                <div class="dev-copyright">© ${new Date().getFullYear()} Basil T Abraham</div>
-            </div>
-        </div>
-    `;
-    
-    document.body.appendChild(signature);
-
-    setTimeout(() => {
-        signature.style.opacity = '0';
-        setTimeout(() => signature.remove(), 1000);
-    }, 6000);
-}
-
-// Additional Developer Signature Key Combinations
+// Developer Signature Key Combinations
 document.addEventListener('DOMContentLoaded', function() {
     let keys = {
         konami: ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'],
